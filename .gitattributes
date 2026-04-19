@@ -1,0 +1,12 @@
+# Force LF line endings for everything so shell scripts work on Linux
+# when the repo is cloned/committed from Windows.
+* text=auto eol=lf
+
+# Binary assets — never modified
+*.gif binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.pt binary
+*.ply binary

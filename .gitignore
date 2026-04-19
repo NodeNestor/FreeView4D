@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+.env
+
+# Cloned deps (fetched by setup/install.sh)
+deps/
+
+# Downloaded checkpoints
+*.pt
+*.safetensors
+*.onnx
+checkpoints/
+
+# Generated outputs
+output/
+runs/
+*.ply
+*.mp4
+*.gif
+!docs/assets/*.gif
+!docs/assets/*.png
+!docs/assets/*.jpg
+
+# HuggingFace cache
+models--*
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

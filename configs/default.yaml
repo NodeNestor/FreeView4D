@@ -1,0 +1,31 @@
+# FreeView4D default pipeline config.
+#
+# Not currently read by the pipeline — shell flags in scripts/run_pipeline.sh are
+# the authoritative source. This file documents the defaults and can be loaded by
+# future wrappers.
+
+# Subsampling
+n_frames: 16           # how many frames to keep from the source clip
+target_size: 448       # WorldMirror resize dim; drop to 384 for 24 frames on 8 GB
+
+# SAM2
+sam2:
+  ckpt: deps/sam2/checkpoints/sam2.1_hiera_tiny.pt
+  cfg: configs/sam2.1/sam2.1_hiera_t.yaml
+  # Required at runtime: click_x, click_y
+
+# Inpaint
+inpaint:
+  dilate: 21           # morphological dilation kernel on the SAM2 mask
+  radius: 9            # cv2.inpaint radius
+
+# Render
+render:
+  width: 448
+  height: 252
+  n_per_seg: 4         # interpolated poses per input-camera pair in spacetime mode
+  dyn_scale: 0.008     # Gaussian radius for the dynamic point clouds
+
+# GPU routing
+gpu:
+  device_id: 0         # CUDA_VISIBLE_DEVICES after CUDA_DEVICE_ORDER=PCI_BUS_ID

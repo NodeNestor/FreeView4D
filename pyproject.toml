@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freeview4d"
+version = "0.1.0"
+description = "Monocular video to navigable 4D Gaussian Splatting world via static/dynamic decomposition"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "NodeNestor / FreeView4D contributors" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+
+# Deep deps (torch, gsplat, sam2, hyworld2) are installed by setup/install.sh.
+dependencies = [
+    "numpy>=1.26,<2.0",
+    "Pillow>=10.0",
+    "opencv-python>=4.8",
+    "scipy>=1.11",
+    "plyfile>=1.0",
+    "imageio>=2.31",
+    "imageio-ffmpeg>=0.4",
+    "PyYAML>=6.0",
+    "tqdm>=4.65",
+]
+
+[project.urls]
+Homepage = "https://github.com/NodeNestor/FreeView4D"
+Issues = "https://github.com/NodeNestor/FreeView4D/issues"
+
+[tool.setuptools.packages.find]
+include = ["freeview4d*"]

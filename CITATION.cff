@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "FreeView4D: Monocular video to 4D Gaussian Splatting via static/dynamic decomposition"
+message: "If this prototype was useful, please consider citing it along with the upstream models it depends on."
+type: software
+authors:
+  - name: "NodeNestor / FreeView4D contributors"
+repository-code: "https://github.com/NodeNestor/FreeView4D"
+license: Apache-2.0
+date-released: 2026-04-20
+abstract: >-
+  FreeView4D is a ~50-second feed-forward pipeline that converts a short
+  monocular video into a navigable 4D Gaussian Splatting scene, with no
+  per-scene optimization. It decomposes the problem into a static
+  background (reconstructed by Tencent HY-World 2.0 / WorldMirror over
+  person-inpainted frames) and per-frame dynamic point clouds (obtained by
+  unprojecting SAM 2 masks through WorldMirror's depth and cameras), then
+  composites both with gsplat. Runs on consumer GPUs (tested on RTX 4060
+  8 GB). This is a prototype / proof-of-concept, not production software.
+references:
+  - type: software
+    title: "HunyuanWorld 2.0 / HunyuanWorld-Mirror"
+    authors:
+      - name: Tencent Hunyuan
+    url: "https://github.com/Tencent-Hunyuan/HY-World-2.0"
+  - type: software
+    title: "Segment Anything 2"
+    authors:
+      - name: "Meta AI"
+    url: "https://github.com/facebookresearch/sam2"
+  - type: software
+    title: "gsplat"
+    authors:
+      - name: "nerfstudio contributors"
+    url: "https://github.com/nerfstudio-project/gsplat"

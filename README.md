@@ -1,5 +1,12 @@
 # FreeView4D
 
+<p align="left">
+  <a href="LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"></a>
+  <img alt="Python 3.10" src="https://img.shields.io/badge/python-3.10-blue">
+  <img alt="PyTorch 2.4.0+cu124" src="https://img.shields.io/badge/PyTorch-2.4.0%2Bcu124-ee4c2c">
+  <img alt="Status: prototype" src="https://img.shields.io/badge/status-prototype-orange">
+</p>
+
 > 🧪 **Prototype — this is a small demo of an idea, not production software.** It's a working proof of concept that video → navigable 4D scene is achievable *without* per-scene optimization, by decomposing the problem into `static + dynamic(t)` and using off-the-shelf feed-forward models. Rough edges, honest limitations, ~300 lines of glue code.
 
 **Monocular video → navigable 4D Gaussian Splatting world** via static/dynamic decomposition. No per-scene optimization. Runs on consumer GPUs (tested on RTX 4060 8 GB).
